@@ -1,0 +1,16 @@
+import java.util.Scanner;
+import java.io.File;
+public class Main{
+    public static void main(String[]args){
+        File file = new File("Hippo.txt");
+        try{
+            Scanner fr = new Scanner(file);
+            while(fr.hasNextLine()){
+                String i = fr.nextLine();
+                System.out.println(i);
+            }
+        } catch (Exception e){
+            System.out.println("No file");
+        }
+    }
+}
